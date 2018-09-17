@@ -1,12 +1,33 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-app>
+      <vsidebar :visible="visible"></vsidebar>
+      <vheader :toggle="toggle"></vheader>
+      <vcontent>
+        <router-view></router-view>
+      </vcontent>
+    </v-app>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      visible: false
+    }
+  },
+  methods: {
+    toggle () {
+      this.visible = !this.visible
+    }
+  },
+  components: {
+    'vheader': () => import('./components/Header.vue'),
+    'vsidebar': () => import('./components/Sidebar.vue'),
+    'vcontent': () => import('./components/Content.vue'),
+  }
 }
 </script>
 
