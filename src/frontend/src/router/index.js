@@ -12,6 +12,6 @@ export default new Router({
       component: function (resolve) {
         require(['@/views/Index'], resolve)
       }
-    },
+    }
   ]
 })

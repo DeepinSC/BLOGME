@@ -6,7 +6,9 @@
     dark
     clipped-left
     class="primary">
-    <v-toolbar-side-icon dark @click.stop="onToggle" ></v-toolbar-side-icon>
+    <v-btn dark flat @click.stop="onToggle" class="primary">
+      <v-icon>menu</v-icon>
+    </v-btn>
     <v-toolbar-title class="mr-5 align-center">
       <span @click.stop="toRoute('index')"> BLOGME </span>
     </v-toolbar-title>

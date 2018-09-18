@@ -4,7 +4,6 @@
     app
     clipped
     v-model="visible"
-    :mini-variant="$vuetify.breakpoint.smAndDown"
     >
     <v-container grid-list-sm>
       <v-layout row justify-center align-center>
@@ -77,9 +76,9 @@ export default {
   props: ['visible'],
   methods: {
     toRoute (rname, rparams = {}, query = {}) {
-        this.dialog = true
-        this.$router.push({name: rname, params: rparams, query: query})
-      },
+      this.dialog = true
+      this.$router.push({name: rname, params: rparams, query: query})
+    }
   },
   computed: {
     year () {

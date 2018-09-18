@@ -6,6 +6,7 @@
       <vcontent>
         <router-view></router-view>
       </vcontent>
+      <vfooter></vfooter>
     </v-app>
   </div>
 </template>
@@ -27,6 +28,7 @@ export default {
     'vheader': () => import('./components/Header.vue'),
     'vsidebar': () => import('./components/Sidebar.vue'),
     'vcontent': () => import('./components/Content.vue'),
+    'vfooter': () => import('./components/Footer.vue')
   }
 }
 </script>
