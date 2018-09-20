@@ -1,12 +1,6 @@
 <template>
-  <v-toolbar
-    app
-    dense
-    fixed
-    dark
-    clipped-left
-    class="primary">
-    <v-btn dark flat @click.stop="onToggle" class="primary">
+  <v-toolbar app dense fixed dark clipped-left class="info darken-2">
+    <v-btn dark flat @click.stop="onToggle" class="info">
       <v-icon>menu</v-icon>
     </v-btn>
     <v-toolbar-title class="mr-5 align-center">

@@ -1,6 +1,6 @@
 <template>
   <v-flex xs12>
-    <v-container grid-list-xl>
+    <v-container grid-list-xl class="text-xs-center">
       <v-layout row>
         <v-flex xs12>
           <v-flex xs10 offset-xs1 class="pb-3">

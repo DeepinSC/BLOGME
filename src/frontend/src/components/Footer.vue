@@ -1,8 +1,8 @@
 <template>
-  <v-footer class="blue darken-2">
+  <v-footer dark class="info darken-2 text-center">
     <v-layout row wrap align-center>
       <v-flex xs12>
-        <div class="white--text ml-3">
+        <div class="white--text ml-3 text-center">
           <v-icon dark>person</v-icon>
           Made by <a class="white--text" href="https://github.com/DeepinSC">Tinghui Liao</a>
         </div>

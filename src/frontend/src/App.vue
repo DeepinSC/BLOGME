@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <v-app>
-      <vsidebar :visible="visible"></vsidebar>
-      <vheader :toggle="toggle"></vheader>
+      <vsidebar :visible="sidebarVisible"></vsidebar>
+      <vheader :toggle="toggle" v-if="headerVisible"></vheader>
       <vcontent>
         <router-view></router-view>
       </vcontent>
@@ -16,13 +16,14 @@ export default {
   name: 'App',
   data () {
     return {
-      visible: false
+      sidebarVisible: false,
+      headerVisible: true,
     }
   },
   methods: {
     toggle () {
-      this.visible = !this.visible
-    }
+      this.sidebarVisible = !this.sidebarVisible
+    },
   },
   components: {
     'vheader': () => import('./components/Header.vue'),
@@ -38,7 +39,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>

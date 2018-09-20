@@ -9,9 +9,19 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: function (resolve) {
-        require(['@/views/Index'], resolve)
+      component:  (resolve) => {
+        require(['@/views/index/Index'], resolve)
       }
-    }
+    },
+    {
+      path: '/blog_list',
+      name: 'blog_list',
+      component: (resolve) =>  {
+        require(['@/views/blog/BlogList'], resolve)
+      }
+    },
+    { path: '/home',
+      name: 'home',
+      redirect: '/' }
   ]
 })
