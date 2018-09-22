@@ -9,14 +9,14 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component:  (resolve) => {
+      component: (resolve) => {
         require(['@/views/index/Index'], resolve)
       }
     },
     {
       path: '/blog_list',
       name: 'blog_list',
-      component: (resolve) =>  {
+      component: (resolve) => {
         require(['@/views/blog/BlogList'], resolve)
       }
     },

@@ -56,8 +56,7 @@
       </v-list-tile-content>
     </v-list-tile>
     </v-list>
-  </v-navigation-drawer
-    dark>
+  </v-navigation-drawer>
 </template>
 
 <script>

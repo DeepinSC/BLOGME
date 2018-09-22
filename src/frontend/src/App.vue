@@ -17,13 +17,13 @@ export default {
   data () {
     return {
       sidebarVisible: false,
-      headerVisible: true,
+      headerVisible: true
     }
   },
   methods: {
     toggle () {
       this.sidebarVisible = !this.sidebarVisible
-    },
+    }
   },
   components: {
     'vheader': () => import('./components/Header.vue'),

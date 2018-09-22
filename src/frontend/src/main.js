@@ -4,10 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.config.productionTip = false
 Vue.use(Vuetify, {
-  iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
+  iconfont: 'md' // 'md' || 'mdi' || 'fa' || 'fa4'
 })
 
 /* eslint-disable no-new */

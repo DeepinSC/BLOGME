@@ -4,6 +4,7 @@
     "vuetify": "^1.2.3"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "vue-cli-plugin-vuetify": "^0.1.6"
   }
 }
