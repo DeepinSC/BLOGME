@@ -4,9 +4,8 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
+export const routerMap = [
+   {
       path: '/',
       name: 'index',
       component: (resolve) => {
@@ -14,14 +13,34 @@ export default new Router({
       }
     },
     {
-      path: '/blog_list',
+      path: '/blog',
       name: 'blog_list',
+      redirect: '/blog/list',
       component: (resolve) => {
-        require(['@/views/blog/BlogList'], resolve)
-      }
+        require(['@/views/blog/BlogLayout'], resolve)
+      },
+      children: [
+        {
+          path: 'list',
+          component: (resolve) => {
+            require(['@/views/blog/BlogList'], resolve)
+          }
+        },
+        {
+          path: ':id(\\d+)',
+          name: 'blog_detail',
+          component: (resolve) => {
+            require(['@/views/blog/BlogDetail'], resolve)
+          }
+        },
+      ]
     },
     { path: '/home',
       name: 'home',
       redirect: '/' }
-  ]
+]
+
+export default new Router({
+  scrollBehavior: () => ({ y: 0 }),
+  routes: routerMap
 })

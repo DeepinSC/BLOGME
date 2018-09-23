@@ -15,8 +15,8 @@
                 <v-layout row wrap>
                   <v-flex xs12
                     align-center justify-center text-xs-center>
-                    <v-avatar tile="tile">
-                      <img src="../assets/logo.png" alt="avatar">
+                    <v-avatar tile="tile" style="cursor: pointer">
+                      <img src="../assets/logo.png" alt="avatar" @click.stop="toRoute('index')">
                     </v-avatar>
                   </v-flex>
                   <v-flex xs12 align-center justify-center text-xs-center headline>

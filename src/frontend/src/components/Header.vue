@@ -3,8 +3,11 @@
     <v-btn dark flat @click.stop="onToggle" class="info">
       <v-icon>menu</v-icon>
     </v-btn>
+    <v-avatar tile="tile" style="cursor: pointer">
+      <img class="ml-3" src="../assets/logo.png" style="height: 30px;width: 30px" @click.stop="toRoute('index')">
+    </v-avatar>
     <v-toolbar-title class="mr-5 align-center">
-      <span @click.stop="toRoute('index')"> BLOGME </span>
+      <div> BLOGME </div>
     </v-toolbar-title>
     <v-layout row justify-center>
       <v-flex xs12 sm10 style="max-width: 750px">
@@ -25,7 +28,6 @@
     </v-btn>
 </v-toolbar>
 </template>
-
 <script>
 export default {
   name: 'Header',
@@ -38,6 +40,10 @@ export default {
   methods: {
     onToggle () {
       this.toggle()
+    },
+    toRoute (rname, rparams = {}, query = {}) {
+      this.dialog = true
+      this.$router.push({name: rname, params: rparams, query: query})
     }
   }
 }

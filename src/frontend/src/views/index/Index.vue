@@ -42,7 +42,7 @@
           <v-flex>
             <h1 class="white--text mb-2 display-3 text-s-center">BLOGME</h1>
             <div class="subheading mb-3 text-xs-center">Let's start now!</div>
-            <v-btn dark large class="info" to="/blog_list" >Get Started</v-btn>
+            <v-btn dark large class="info" to="/blog" >Get Started</v-btn>
           </v-flex>
         </v-layout>
       </v-parallax>
