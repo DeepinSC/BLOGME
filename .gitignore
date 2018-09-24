@@ -123,3 +123,4 @@ selenium-debug.log
 *.njsproj
 *.sln
 
+src/frontend/package-lock.json
