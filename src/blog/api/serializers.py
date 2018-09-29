@@ -9,6 +9,7 @@ class BlogSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'user',
+            'img',
             'content',
             'created_at',
             'updated_at',
